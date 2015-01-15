@@ -12,7 +12,7 @@ This is a simple IR-wireless bridge. You need
 What does it?
 -------------
 
-1) Connects to you wireless network
+1) Connects to your wireless network
 
 2) Opens a socket server on port 99
 
