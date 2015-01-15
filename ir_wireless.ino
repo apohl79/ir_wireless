@@ -2,8 +2,8 @@
 #include <esp_ctrl.h>
 #include <ir_ctrl.h>
 
-#define NET_SSID "MC4"
-#define NET_PASS "fp080808"
+#define NET_SSID ""
+#define NET_PASS ""
 #define NET_PORT "99"
 
 #define PIN_ESP_RX 3
