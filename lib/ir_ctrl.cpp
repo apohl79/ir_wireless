@@ -15,9 +15,9 @@ void ir_ctrl::pulse_ir(int32_t microsecs) {
     while (microsecs > 0) {
         // 38 kHz is about 13 microseconds high and 13 microseconds low
         digitalWrite(IR_SND_PIN, HIGH);
-        delayMicroseconds(9);
+        delayMicroseconds(10);
         digitalWrite(IR_SND_PIN, LOW);
-        delayMicroseconds(9);
+        delayMicroseconds(10);
 
         // so 26 microseconds altogether
         microsecs -= 26;
@@ -41,9 +41,9 @@ void ir_ctrl::send(String &code) {
         }
     }
     // send code
-    uint8_t repeat = 3;
-    while (repeat-- > 0) {
-        subidx = 0;
+    //uint8_t repeat = 3;
+    //while (repeat-- > 0) {
+        //subidx = 0;
         for (uint8_t i = 0; i < len; i++) {
             int32_t t = m_buffer[i][0];
             t *= 10;
@@ -52,8 +52,8 @@ void ir_ctrl::send(String &code) {
             t *= 10;
             delayMicroseconds(t);
         }
-        delay(10);
-    }
+        //delay(50);
+    //}
 }
 
 bool ir_ctrl::receive(int8_t timeout) {
